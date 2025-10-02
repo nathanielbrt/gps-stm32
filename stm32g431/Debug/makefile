@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (13.3.rel1)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := PAY_gps_stmg4
+BUILD_ARTIFACT_NAME := stm32g4xx_padrao_v2
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-PAY_gps_stmg4.elf \
+stm32g4xx_padrao_v2.elf \
 
 MAP_FILES += \
-PAY_gps_stmg4.map \
+stm32g4xx_padrao_v2.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-PAY_gps_stmg4.list \
+stm32g4xx_padrao_v2.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: PAY_gps_stmg4.elf secondary-outputs
+main-build: stm32g4xx_padrao_v2.elf secondary-outputs
 
 # Tool invocations
-PAY_gps_stmg4.elf PAY_gps_stmg4.map: $(OBJS) $(USER_OBJS) C:\Users\nathaniel\STM32CubeIDE\workspace_1.19.0\PAY_gps_stmg4\STM32G431CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "PAY_gps_stmg4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\nathaniel\STM32CubeIDE\workspace_1.19.0\PAY_gps_stmg4\STM32G431CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PAY_gps_stmg4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+stm32g4xx_padrao_v2.elf stm32g4xx_padrao_v2.map: $(OBJS) $(USER_OBJS) C:\Users\nathaniel\Downloads\stm32-nmea-gps-hal-master\GPS\stm32g4xx_padrao_v2\ -\ Copia\STM32G431CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "stm32g4xx_padrao_v2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\nathaniel\Downloads\stm32-nmea-gps-hal-master\GPS\stm32g4xx_padrao_v2 - Copia\STM32G431CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32g4xx_padrao_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-PAY_gps_stmg4.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "PAY_gps_stmg4.list"
+stm32g4xx_padrao_v2.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "stm32g4xx_padrao_v2.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) PAY_gps_stmg4.elf PAY_gps_stmg4.list PAY_gps_stmg4.map default.size.stdout
+	-$(RM) default.size.stdout stm32g4xx_padrao_v2.elf stm32g4xx_padrao_v2.list stm32g4xx_padrao_v2.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
